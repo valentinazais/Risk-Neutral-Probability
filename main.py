@@ -82,7 +82,7 @@ print(f"Interpolated Premium at K={atm_strike:.2f}: {premium:.2f}")
 # Compute PNL: intrinsic payoff minus premium
 pnl_full = np.maximum(dense_strikes - atm_strike, 0) - premium
 
-# New: Create figure with two subplots (PNL above PDF)
+# Create figure with two subplots (PNL above PDF)
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), sharex=True, gridspec_kw={'height_ratios': [1, 2]})
 
 # Plot PNL on top subplot
